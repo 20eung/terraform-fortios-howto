@@ -1,6 +1,11 @@
 # terraform-fortios-howto
 
-How to use FortiOS as terraform provider
+How to use FortiOS as terraform provider.
+
+Terraform에서 FortiGate 장비를 사용하기 위한 방법 입니다.
+
+사전 준비해야 할 것이 있으며, 모듈 module 사용 시 주의가 필요합니다.
+
 
 > ## 1. Create a REST API administrator:
 1. _System_ > _Admin Profile_ > [ _+Create New_ ]
