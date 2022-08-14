@@ -26,4 +26,8 @@ How to use FortiOS as terraform provider
 
 > ## CA 인증서 등록
 1. _System_ > Certificates > [ _Import_ ] > _Local Certificate_
-![CA Import](./img/system-certificates-import.png "CA Import")
+![CA Import](./img/system-certificates-import-01.png "CA Import")
+
+![CA Import](./img/system-certificates-import-02.png "CA Import")
+
+![CA Import](./img/system-certificates-import-03.png "CA Import")
