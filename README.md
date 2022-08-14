@@ -25,9 +25,15 @@ How to use FortiOS as terraform provider
 [ 인증서 만들기 ](https://github.com/20eung/make_crt_file) 바로가기
 
 > ## CA 인증서 등록
-1. _System_ > Certificates > [ _Import_ ] > _Local Certificate_
-![CA Import](./img/system-certificates-import-01.png "CA Import")
+1. _System_ > Certificates > [ _Import_ ]
+* _Local Certificate_ 선택
 
-![CA Import](./img/system-certificates-import-02.png "CA Import")
+  ![CA Import](./img/system-certificates-import-01.png "CA Import")
 
-![CA Import](./img/system-certificates-import-03.png "CA Import")
+* _CRT_, _KEY_ 파일 등록, 인증서 만들 때 사용한 _Password_ 등록
+
+  ![CA Import](./img/system-certificates-import-02.png "CA Import")
+
+* 등록 완료 화면
+
+  ![CA Import](./img/system-certificates-import-03.png "CA Import")
