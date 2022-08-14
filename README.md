@@ -19,3 +19,11 @@ How to use FortiOS as terraform provider
 
 5. _OK_
 * API Key는 한 번만 표시되므로 복사하여 안전한 곳에 저장
+* API key는 terraform에서 token 으로 사용됨
+
+> ## CA 인증서 생성
+[ 인증서 만들기 ](https://github.com/20eung/make_crt_file) 바로가기
+
+> ## CA 인증서 등록
+1. _System_ > Certificates > [ _Import_ ] > _Local Certificate_
+![CA Import](./img/system-certificates-import.png "CA Import")
