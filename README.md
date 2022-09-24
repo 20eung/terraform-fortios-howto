@@ -50,7 +50,7 @@ end
 
 config system api-user
     edit "cloud9-terraform"
-        set api-key ENC SH2tmh6kwRIwRKX8uhpJgW3OAyu1ENUIU88/4G3fBEjdaAujJ4JGqT7KSBpQVM=
+        set api-key ~~~~~~
         set accprofile "api_super_admin"
         set vdom "root"
         config trusthost
@@ -84,16 +84,11 @@ end
   ![CA Import](./img/system-certificates-import-03.png "CA Import")
 
 ```
-config system api-user
-    edit "cloud9-terraform"
-        set api-key ENC SH2tmh6kwRIwRKX8uhpJgW3OAyu1ENUIU88/4G3fBEjdaAujJ4JGqT7KSBpQVM=
-        set accprofile "api_super_admin"
-        set vdom "root"
-        config trusthost
-            edit 1
-                set ipv4-trusthost 1.2.3.4 255.255.255.255
-            next
-        end
+
+config vpn certificate local
+    edit "terraform"
+        set password ~~~~~~
+        set range global
     next
 end
 ```
