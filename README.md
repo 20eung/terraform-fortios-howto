@@ -38,6 +38,29 @@ Terraform에서 FortiGate 장비를 사용하기 위한 방법 입니다.
 
 * API key는 terraform에서 token 으로 사용됨
 
+```
+config system accprofile
+    edit "api_super_admin"
+        set sysgrp read-write
+        set netgrp read-write
+        set fwgrp read-write
+        set vpngrp read-write
+    next
+end
+
+config system api-user
+    edit "cloud9-terraform"
+        set api-key ENC SH2tmh6kwRIwRKX8uhpJgW3OAyu1ENUIU88/4G3fBEjdaAujJ4JGqT7KSBpQVM=
+        set accprofile "api_super_admin"
+        set vdom "root"
+        config trusthost
+            edit 1
+                set ipv4-trusthost 1.2.3.4 255.255.255.255
+            next
+        end
+    next
+end
+```
 
 > ## 2. CA 인증서 생성
 
@@ -60,6 +83,20 @@ Terraform에서 FortiGate 장비를 사용하기 위한 방법 입니다.
 
   ![CA Import](./img/system-certificates-import-03.png "CA Import")
 
+```
+config system api-user
+    edit "cloud9-terraform"
+        set api-key ENC SH2tmh6kwRIwRKX8uhpJgW3OAyu1ENUIU88/4G3fBEjdaAujJ4JGqT7KSBpQVM=
+        set accprofile "api_super_admin"
+        set vdom "root"
+        config trusthost
+            edit 1
+                set ipv4-trusthost 1.2.3.4 255.255.255.255
+            next
+        end
+    next
+end
+```
 
 > ## 4. 환경변수 설정
 
