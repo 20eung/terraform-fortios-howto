@@ -49,9 +49,10 @@ config system accprofile
 end
 
 config system api-user
-    edit "cloud9-terraform"
+    edit "terraform"
+        set comments "terraform automation"
         set api-key ~~~~~~
-        set accprofile "api_super_admin"
+        set accprofile "super_admin"
         set vdom "root"
         config trusthost
             edit 1
@@ -84,10 +85,20 @@ end
   ![CA Import](./img/system-certificates-import-03.png "CA Import")
 
 ```
+config certificate local
+    edit "terraform"
+        set password pass-phrase-for-terraform-key-file
+        set private-key "-----BEGIN ENCRYPTED PRIVATE KEY-----
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----END ENCRYPTED PRIVATE KEY-----"
+        set certificate "-----BEGIN CERTIFICATE-----
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----END CERTIFICATE-----"
+    next
+end
 
 config vpn certificate local
     edit "terraform"
-        set password ~~~~~~
         set range global
     next
 end
