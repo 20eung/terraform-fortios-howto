@@ -85,7 +85,7 @@ end
   ![CA Import](./img/system-certificates-import-03.png "CA Import")
 
 ```
-config certificate local
+config vpn certificate local
     edit "terraform"
         set password pass-phrase-for-terraform-key-file
         set private-key "-----BEGIN ENCRYPTED PRIVATE KEY-----
